@@ -1,4 +1,4 @@
-name: Publish Docker image
+name: AWS cli with Terraform
 
 on:
   release:
@@ -10,7 +10,7 @@ on:
 
 jobs:
   push_to_registries:
-    name: Push Docker image to multiple registries
+    name: Build image containing both AWS cli and Terraform cli
     runs-on: ubuntu-latest
     permissions:
       packages: write
@@ -30,7 +30,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v3
         with:
-          images: ghcr.io/${{ github.repository }}
+          images: ghcr.io/${{ github.actor }}/aws_cli_with_terraform
 
       - name: Build and push Docker images
         uses: docker/build-push-action@v2
