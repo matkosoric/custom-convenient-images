@@ -14,10 +14,10 @@ jobs:
   docker_publish:
     runs-on: "ubuntu-20.04"
 
-    defaults:
-      run:
-        shell: bash
-        working-directory: ./aws_cli_with_terraform
+#    defaults:
+#      run:
+#        shell: bash
+#        working-directory: ./aws_cli_with_terraform
 
     steps:
       - uses: actions/checkout@v2
