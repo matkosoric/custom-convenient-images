@@ -1,4 +1,4 @@
-FROM hashicorp/terraform:1.0.0
+FROM hashicorp/terraform:1.0.11
 
 # install awscli and set bash as default shell
 RUN apk add --no-cache \
